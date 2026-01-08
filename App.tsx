@@ -21,9 +21,13 @@ function App() {
         setIsDesktopOpen={setIsDesktopSidebarOpen}
       />
       
-      {/* Content Wrapper handling the sidebar offset */}
+      {/* 
+        Content Wrapper handling the sidebar offset.
+        Removed w-full to allow the block element to naturally fill remaining width
+        without forcing horizontal overflow when margin is applied.
+      */}
       <div className={`
-        min-h-screen w-full
+        min-h-screen
         transition-all duration-300 ease-in-out
         ${isDesktopSidebarOpen ? 'lg:ml-80' : ''}
       `}>
@@ -39,9 +43,9 @@ function App() {
         </button>
 
         {/* Centering Container */}
-        <div className="max-w-[1400px] mx-auto p-4 lg:p-8 w-full">
+        <div className="max-w-[1400px] mx-auto p-4 lg:p-8">
           {/* Main Content Area */}
-          <main className="space-y-6 w-full">
+          <main className="space-y-6">
             <Hero />
             <Experience />
             <Projects />
