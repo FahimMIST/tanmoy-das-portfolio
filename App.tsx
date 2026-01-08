@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import ShareFAB from './components/ShareFAB';
 import { PanelLeftOpen } from 'lucide-react';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         isDesktopOpen={isDesktopSidebarOpen}
         setIsDesktopOpen={setIsDesktopSidebarOpen}
       />
+      
+      {/* Share Floating Action Button */}
+      <ShareFAB />
       
       {/* 
         Content Wrapper handling the sidebar offset.
