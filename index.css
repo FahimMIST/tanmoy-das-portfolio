@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+}
+
+/* 
+  GPU Acceleration & Anti-Aliasing Utility 
+  - perspective: 1px fixes specific Chrome/Safari flickering
+  - translateZ(0) forces a new composite layer
+  - backface-visibility prevents rear-face rendering artifacts
+*/
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform, box-shadow;
+}
+
+/* 
+  Mask Image Hack 
+  - Clips overflow strictly to border-radius
+  - "background-clip: padding-box" ensures backgrounds don't bleed under borders
+*/
+.fix-safari-radius {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  overflow: hidden;
+  isolation: isolate;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+}
+
+/* Global utility for glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
