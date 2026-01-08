@@ -21,12 +21,11 @@ function App() {
         setIsDesktopOpen={setIsDesktopSidebarOpen}
       />
       
-      {/* Main Content Area */}
-      <main className={`
+      {/* Content Wrapper handling the sidebar offset */}
+      <div className={`
+        min-h-screen w-full
         transition-all duration-300 ease-in-out
-        ${isDesktopSidebarOpen ? 'lg:ml-80' : 'lg:ml-0'}
-        min-h-screen
-        p-4 lg:p-8 max-w-[1400px] mx-auto
+        ${isDesktopSidebarOpen ? 'lg:ml-80' : ''}
       `}>
         
         {/* Toggle Button for Desktop when closed */}
@@ -39,15 +38,19 @@ function App() {
           <PanelLeftOpen size={24} className="group-hover:scale-110 transition-transform" />
         </button>
 
-        <div className="space-y-6">
-          <Hero />
-          <Experience />
-          <Projects />
-          <Skills />
-          <Education />
-          <Contact />
+        {/* Centering Container */}
+        <div className="max-w-[1400px] mx-auto p-4 lg:p-8 w-full">
+          {/* Main Content Area */}
+          <main className="space-y-6 w-full">
+            <Hero />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Education />
+            <Contact />
+          </main>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
