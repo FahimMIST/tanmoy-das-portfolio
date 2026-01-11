@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     problem: "Allocate scarce oil spill response resources efficiently across the vast, remote Canadian Arctic.",
     solution: "Proposed a Mixed Integer Linear Programming (MILP) model to optimize equipment location and allocation strategies.",
     tags: ["MIP", "Gurobi", "Optimization", "Python", "Logistics"],
-    image: "https://images.unsplash.com/photo-1543286386-713df548e9cc?q=80&w=1200&auto=format&fit=crop",
+    image: "https://raw.githubusercontent.com/tanmoyie/Decision-Support-Tool/main/Canadian%20Arctic%20GIS%20JP3.gif",
     metrics: ["Optimized resource allocation", "Improved response time"],
     links: [{ label: "Publication", url: "https://www.sciencedirect.com/science/article/pii/S2772586323000424?via%3Dihub" }]
   },
@@ -158,7 +158,7 @@ export const PROJECTS: Project[] = [
     problem: "Balance conflicting objectives of cost and coverage when locating response facilities.",
     solution: "Developed Multiobjective Facility Location model maximizing spill coverage while minimizing cost and response time.",
     tags: ["Multiobjective Optimization", "Branch & Cut", "Gurobi", "Python"],
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://raw.githubusercontent.com/tanmoyie/Decision-Support-Tool/main/Graphical%20abstract%20Multiobjective%20Facility%20Location%20Model.png",
     metrics: ["90% spill coverage", "Cost minimized"],
     links: [{ label: "Publication", url: "https://www.tandfonline.com/eprint/CWQTBMYKYY8TDZ2KGNYW/full?target=10.1080/03155986.2025.2539634" }]
   }

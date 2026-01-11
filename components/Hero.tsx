@@ -1,5 +1,4 @@
 import React from 'react';
-import { SOCIAL_LINKS } from '../constants';
 
 const Hero: React.FC = () => {
   return (
