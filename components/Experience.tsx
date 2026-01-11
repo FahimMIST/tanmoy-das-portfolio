@@ -21,8 +21,8 @@ const Experience: React.FC = () => {
         </div>
 
         <div className="relative">
-           {/* Continuous Vertical Line (Desktop) */}
-           <div className="absolute left-[142px] top-4 bottom-0 w-px bg-gradient-to-b from-slate-200 via-slate-200 to-transparent hidden md:block"></div>
+           {/* Continuous Vertical Line (Desktop) - Adjusted position to 176px to fit wider date col */}
+           <div className="absolute left-[176px] top-4 bottom-0 w-px bg-gradient-to-b from-slate-200 via-slate-200 to-transparent hidden md:block"></div>
            
            {/* Continuous Vertical Line (Mobile) */}
            <div className="absolute left-[19px] top-4 bottom-0 w-px bg-gradient-to-b from-slate-200 via-slate-200 to-transparent md:hidden"></div>
@@ -32,8 +32,8 @@ const Experience: React.FC = () => {
               <div key={exp.id} className="relative group">
                 <div className="flex flex-col md:flex-row gap-8">
                   
-                  {/* Date & Location Column (Desktop) */}
-                  <div className="hidden md:flex flex-col items-end w-32 flex-shrink-0 pt-2 text-right">
+                  {/* Date & Location Column (Desktop) - Increased width to w-40 (160px) */}
+                  <div className="hidden md:flex flex-col items-end w-40 flex-shrink-0 pt-2 text-right">
                     <div className="font-bold text-slate-900 text-sm tracking-tight">{exp.period.split('–')[0]}</div>
                     <div className="text-slate-400 text-xs mt-0.5 font-medium mb-2">to {exp.period.split('–')[1] || 'Present'}</div>
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-[10px] font-bold text-slate-500 uppercase tracking-wider">
@@ -41,8 +41,8 @@ const Experience: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Timeline Node */}
-                  <div className="absolute left-[19px] md:left-[142px] -translate-x-1/2 top-2 flex flex-col items-center z-10">
+                  {/* Timeline Node - Adjusted to left-[176px] */}
+                  <div className="absolute left-[19px] md:left-[176px] -translate-x-1/2 top-2 flex flex-col items-center z-10">
                      {/* Outer Ring */}
                      <div className={`
                        w-10 h-10 rounded-full border-4 border-white shadow-sm flex items-center justify-center transition-all duration-500

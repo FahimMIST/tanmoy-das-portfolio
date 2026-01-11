@@ -1,11 +1,9 @@
 import { Experience, Project, Education, SkillCategory } from './types';
 
 export const SOCIAL_LINKS = {
-  email: "tanmoy.ieor@gmail.com",
   phone: "(512) 801-6511",
   linkedin: "https://www.linkedin.com/in/tanmoyie",
-  location: "Austin, Texas",
-  resume: "https://drive.google.com/file/d/1GH93OeRo_eIs_bmQe5Hk6z2hEL5V9WQb/view?usp=sharing"
+  location: "Nashville, Tennessee"
 };
 
 export const ABOUT_TEXT = `I am passionate about solving real-world problems through data-driven decision-making. With over 5 years of experience in AI and operations research, I specialize in logistics and FinTech optimization.
@@ -13,6 +11,19 @@ export const ABOUT_TEXT = `I am passionate about solving real-world problems thr
 I am currently a postdoctoral scientist in Operations Research, focusing on vehicle routing, exact algorithms like Column Generation and Benders Decomposition, and heuristic design. I hold a Ph.D. in Industrial Engineering from Dalhousie University, Canada.`;
 
 export const EXPERIENCES: Experience[] = [
+  {
+    id: "insight-enterprises",
+    role: "Operations Research Scientist",
+    company: "Insight Enterprises",
+    location: "Nashville, TN",
+    period: "Oct 2023 – Present",
+    description: [
+      "Designing and implementing advanced optimization algorithms to solve complex supply chain and logistics challenges for enterprise clients.",
+      "Collaborating with cross-functional teams to integrate data-driven decision-support tools into large-scale production systems.",
+      "Applying mixed-integer programming and machine learning techniques to improve operational efficiency and reduce costs."
+    ],
+    tools: "Python, Gurobi, SQL, Azure"
+  },
   {
     id: "postdoc-texas",
     role: "Operations Research Postdoc",
@@ -55,20 +66,6 @@ export const EXPERIENCES: Experience[] = [
       "Drove continuous improvement and business values by proposing effective data strategy, integrating data governance and risk management."
     ],
     tools: "AIMMS, Azure ML, CPLEX API, R, PyTorch, MLOps"
-  },
-  {
-    id: "da-upwork",
-    role: "Data Analyst",
-    company: "Upwork Inc.",
-    location: "Bangladesh",
-    period: "Jan 2018 – Aug 2019",
-    description: [
-      "Conducted exploratory data analysis, pipeline configuration, reducing cost by 32% in financial market.",
-      "Applied causal inference, hypothesis testing, time series analysis, A/B experiments, data structure and algorithms.",
-      "Analyzed Yahoo Finance stock data to identify trends and patterns, and optimized investment portfolio, saving 15hr/week.",
-      "Produced technical reports and dashboards for data visualization, decisions-making, and communicating results."
-    ],
-    tools: "AWS, Agile, YAML, DAG, Databricks, Snowflake, PowerBI, R, Excel"
   },
   {
     id: "prof-mist",
@@ -141,7 +138,7 @@ export const PROJECTS: Project[] = [
     problem: "Predict damage and oil outflow from tanker collisions to improve safety standards.",
     solution: "Developed DNN, GBRT, and Polynomial Regression models trained on Monte Carlo simulated collision data.",
     tags: ["Deep Learning", "PyTorch", "Scikit-learn", "Regression", "Python", "SQL"],
-    image: "https://images.unsplash.com/photo-1505663919891-b6a88b835957?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
     metrics: ["92% prediction accuracy"],
     links: [{ label: "Publication", url: "https://journals.sagepub.com/doi/10.1177/14750902211039659" }]
   },
@@ -151,7 +148,7 @@ export const PROJECTS: Project[] = [
     problem: "Allocate scarce oil spill response resources efficiently across the vast, remote Canadian Arctic.",
     solution: "Proposed a Mixed Integer Linear Programming (MILP) model to optimize equipment location and allocation strategies.",
     tags: ["MIP", "Gurobi", "Optimization", "Python", "Logistics"],
-    image: "https://images.unsplash.com/photo-1548600140-5936780c1071?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1543286386-713df548e9cc?q=80&w=1200&auto=format&fit=crop",
     metrics: ["Optimized resource allocation", "Improved response time"],
     links: [{ label: "Publication", url: "https://www.sciencedirect.com/science/article/pii/S2772586323000424?via%3Dihub" }]
   },

@@ -5,7 +5,6 @@ import {
   Code, 
   GraduationCap, 
   Cpu, 
-  Mail,
   Linkedin,
   Menu,
   X,
@@ -31,11 +30,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const navItems = [
     { label: 'About', icon: User, href: '#about' },
-    { label: 'Experience', icon: Briefcase, href: '#experience' },
     { label: 'Projects', icon: Cpu, href: '#projects' },
+    { label: 'Experience', icon: Briefcase, href: '#experience' },
     { label: 'Skills', icon: Code, href: '#skills' },
     { label: 'Education', icon: GraduationCap, href: '#education' },
-    { label: 'Contact', icon: Mail, href: '#contact' },
+    { label: 'Contact', icon: MapPin, href: '#contact' },
   ];
 
   // Handle smooth scrolling with offset
@@ -75,12 +74,6 @@ const Sidebar: React.FC<SidebarProps> = ({
         if (contactSection) {
           setActiveSection('contact');
           return;
-        } else if (sections.length > 0) {
-           const lastId = sections[sections.length - 1].getAttribute('id');
-           if (lastId) {
-             setActiveSection(lastId);
-             return;
-           }
         }
       }
 
@@ -91,10 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         const rect = element.getBoundingClientRect();
         
         // We define the active area as a line 1/3 down the viewport.
-        // If a section crosses this line, it's active.
-        const triggerPoint = innerHeight / 3;
-
-        if (rect.top <= triggerPoint && rect.bottom > triggerPoint) {
+        if (rect.top <= innerHeight / 3 && rect.bottom > innerHeight / 3) {
           current = element.getAttribute('id') || 'about';
         }
       });
@@ -173,17 +163,10 @@ const Sidebar: React.FC<SidebarProps> = ({
                 href={SOCIAL_LINKS.linkedin} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 bg-slate-50 text-slate-500 hover:text-white hover:bg-slate-900 hover:shadow-sm rounded-xl transition-all duration-300 group"
+                className="p-2.5 bg-slate-50 text-slate-500 hover:text-white hover:bg-[#0077b5] hover:shadow-sm rounded-xl transition-all duration-300 group"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin size={18} className="transition-transform" />
-              </a>
-              <a 
-                href={`mailto:${SOCIAL_LINKS.email}`} 
-                className="p-2.5 bg-slate-50 text-slate-500 hover:text-white hover:bg-slate-900 hover:shadow-sm rounded-xl transition-all duration-300 group"
-                aria-label="Send Email"
-              >
-                <Mail size={18} className="transition-transform" />
               </a>
             </div>
           </div>

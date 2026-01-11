@@ -1,6 +1,6 @@
 import React from 'react';
 import { SOCIAL_LINKS } from '../constants';
-import { Mail, Linkedin, MapPin, Send } from 'lucide-react';
+import { Linkedin, MapPin, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -22,22 +22,13 @@ const Contact: React.FC = () => {
            
            <div className="flex flex-col sm:flex-row gap-4">
              <a 
-               href={`mailto:${SOCIAL_LINKS.email}`} 
-               className="group flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-2xl hover:bg-black transition-all font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-               aria-label="Send an email"
-             >
-               <Mail size={20} className="text-slate-300 group-hover:text-white transition-colors" />
-               <span>Send an Email</span>
-             </a>
-             
-             <a 
                href={SOCIAL_LINKS.linkedin} 
                target="_blank" 
                rel="noreferrer"
-               className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-slate-900 hover:text-slate-900 transition-all font-medium shadow-sm hover:shadow-md"
+               className="group flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-2xl hover:bg-slate-800 transition-all font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                aria-label="Connect on LinkedIn"
              >
-               <Linkedin size={20} className="text-slate-400 group-hover:text-slate-900 transition-colors" />
+               <Linkedin size={20} className="text-slate-300 group-hover:text-white transition-colors" />
                <span>Connect on LinkedIn</span>
              </a>
            </div>
@@ -51,21 +42,6 @@ const Contact: React.FC = () => {
              <div>
                <h4 className="font-bold text-slate-900 mb-0.5">Current Location</h4>
                <p className="text-slate-600 font-medium">{SOCIAL_LINKS.location}</p>
-             </div>
-           </div>
-           
-           <div className="flex items-start gap-4">
-             <div className="p-3 bg-white rounded-xl shadow-sm text-slate-900 border border-slate-200">
-               <Mail size={24} />
-             </div>
-             <div className="overflow-hidden">
-               <h4 className="font-bold text-slate-900 mb-0.5">Email Address</h4>
-               <a 
-                 href={`mailto:${SOCIAL_LINKS.email}`} 
-                 className="text-slate-600 truncate font-medium hover:text-slate-900 hover:underline transition-all block"
-               >
-                 {SOCIAL_LINKS.email}
-               </a>
              </div>
            </div>
         </div>

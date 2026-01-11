@@ -27,8 +27,6 @@ function App() {
       
       {/* 
         Content Wrapper handling the sidebar offset.
-        Removed w-full to allow the block element to naturally fill remaining width
-        without forcing horizontal overflow when margin is applied.
       */}
       <div className={`
         min-h-screen
@@ -51,8 +49,8 @@ function App() {
           {/* Main Content Area */}
           <main className="space-y-6">
             <Hero />
-            <Experience />
             <Projects />
+            <Experience />
             <Skills />
             <Education />
             <Contact />
