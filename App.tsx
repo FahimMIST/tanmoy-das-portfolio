@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import ShareFAB from './components/ShareFAB';
+import Testimonials from './components/Testimonials';
 import { PanelLeftOpen } from 'lucide-react';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             <Experience />
             <Skills />
             <Education />
+            <Testimonials />
             <Contact />
           </main>
         </div>

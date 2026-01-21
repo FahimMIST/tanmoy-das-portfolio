@@ -9,7 +9,8 @@ import {
   Menu,
   X,
   MapPin,
-  PanelLeftClose
+  PanelLeftClose,
+  MessageSquareQuote
 } from 'lucide-react';
 import { SOCIAL_LINKS } from '../constants';
 
@@ -34,6 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     { label: 'Experience', icon: Briefcase, href: '#experience' },
     { label: 'Skills', icon: Code, href: '#skills' },
     { label: 'Education', icon: GraduationCap, href: '#education' },
+    { label: 'Testimonials', icon: MessageSquareQuote, href: '#testimonials' },
     { label: 'Contact', icon: MapPin, href: '#contact' },
   ];
 

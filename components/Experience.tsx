@@ -3,6 +3,14 @@ import { EXPERIENCES } from '../constants';
 import { MapPin, Briefcase, Building2, ArrowRight } from 'lucide-react';
 
 const Experience: React.FC = () => {
+  // Helper to extract 2-letter country code for display
+  const getCountryCode = (location: string) => {
+    if (location.includes('USA')) return 'US';
+    if (location.includes('Canada')) return 'CA';
+    if (location.includes('Bangladesh')) return 'BD';
+    return location.substring(0, 2).toUpperCase();
+  };
+
   return (
     <section id="experience" className="py-24 px-6 lg:px-12 bg-white rounded-[2.5rem] shadow-md mb-6 overflow-hidden relative">
       {/* Background Decoration */}
@@ -28,16 +36,23 @@ const Experience: React.FC = () => {
            <div className="absolute left-[19px] top-4 bottom-0 w-px bg-gradient-to-b from-slate-200 via-slate-200 to-transparent md:hidden"></div>
 
           <div className="space-y-12">
-            {EXPERIENCES.map((exp, index) => (
+            {EXPERIENCES.map((exp, index) => {
+              const countryCode = getCountryCode(exp.location);
+              const city = exp.location.split(',')[0];
+              
+              return (
               <div key={exp.id} className="relative group">
                 <div className="flex flex-col md:flex-row gap-8">
                   
                   {/* Date & Location Column (Desktop) - Increased width to w-48 (192px) for more space */}
                   <div className="hidden md:flex flex-col items-end w-48 flex-shrink-0 pt-2 text-right">
                     <div className="font-bold text-slate-900 text-sm tracking-tight">{exp.period.split('–')[0]}</div>
-                    <div className="text-slate-400 text-xs mt-0.5 font-medium mb-2">to {exp.period.split('–')[1] || 'Present'}</div>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-[10px] font-bold text-slate-500 uppercase tracking-wider">
-                      {exp.location.includes('USA') ? '🇺🇸' : exp.location.includes('Canada') ? '🇨🇦' : '🇧🇩'} {exp.location.split(',')[0]}
+                    <div className="text-slate-400 text-xs mt-0.5 font-medium mb-3">to {exp.period.split('–')[1] || 'Present'}</div>
+                    
+                    {/* Location Badge */}
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-[10px] font-bold uppercase tracking-wider">
+                       <span className="text-slate-400">{countryCode}</span>
+                       <span className="text-slate-500">{city}</span>
                     </div>
                   </div>
 
@@ -64,9 +79,10 @@ const Experience: React.FC = () => {
                       {/* Mobile Header (Date/Loc) */}
                       <div className="flex md:hidden items-center justify-between mb-4 pb-4 border-b border-slate-50">
                         <span className="text-xs font-bold text-primary-700 bg-primary-50 px-2 py-1 rounded-md">{exp.period}</span>
-                        <span className="text-xs text-slate-500 flex items-center gap-1">
-                          <MapPin size={12} /> {exp.location}
-                        </span>
+                        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-slate-50 border border-slate-100 rounded text-[10px] font-bold uppercase tracking-wide">
+                           <span className="text-slate-400">{countryCode}</span>
+                           <span className="text-slate-500">{city}</span>
+                        </div>
                       </div>
 
                       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
@@ -81,14 +97,16 @@ const Experience: React.FC = () => {
                         </div>
                       </div>
 
-                      <ul className="space-y-3 mb-8">
-                        {exp.description.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3.5 text-[15px] text-slate-600 leading-relaxed group/item">
-                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary-300 flex-shrink-0 group-hover/item:scale-125 group-hover/item:bg-primary-500 transition-all" />
-                            <span className="group-hover/item:text-slate-800 transition-colors">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {exp.description && exp.description.length > 0 && (
+                        <ul className="space-y-3 mb-8">
+                          {exp.description.map((item, i) => (
+                            <li key={i} className="flex items-start gap-3.5 text-[15px] text-slate-600 leading-relaxed group/item">
+                              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary-300 flex-shrink-0 group-hover/item:scale-125 group-hover/item:bg-primary-500 transition-all" />
+                              <span className="group-hover/item:text-slate-800 transition-colors">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
 
                       {/* Tech Stack Footer */}
                       {exp.tools && (
@@ -116,7 +134,7 @@ const Experience: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>

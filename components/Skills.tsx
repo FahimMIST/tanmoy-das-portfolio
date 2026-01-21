@@ -1,6 +1,6 @@
 import React from 'react';
 import { SKILL_CATEGORIES } from '../constants';
-import { Code2, Brain, Database, GitGraph, Truck, Sigma } from 'lucide-react';
+import { Code2, Brain, Database, GitGraph, Sigma, Cloud, Terminal, Users } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const getIcon = (title: string) => {
@@ -9,12 +9,14 @@ const Skills: React.FC = () => {
         return <Brain size={24} className="text-slate-700" />;
       case 'Data Science':
         return <Database size={24} className="text-slate-700" />;
-      case 'OR Algorithms':
-        return <GitGraph size={24} className="text-slate-700" />;
-      case 'Supply Chain':
-        return <Truck size={24} className="text-slate-700" />;
-      case 'OR Models':
+      case 'Operations Research':
         return <Sigma size={24} className="text-slate-700" />;
+      case 'Languages & Tools':
+        return <Terminal size={24} className="text-slate-700" />;
+      case 'Cloud & Databases':
+        return <Cloud size={24} className="text-slate-700" />;
+      case 'Soft Skills':
+        return <Users size={24} className="text-slate-700" />;
       default:
         return <Code2 size={24} className="text-slate-700" />;
     }

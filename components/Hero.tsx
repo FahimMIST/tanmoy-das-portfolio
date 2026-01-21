@@ -15,10 +15,10 @@ const Hero: React.FC = () => {
         
         <div className="space-y-6 text-lg lg:text-xl text-slate-600 leading-relaxed font-normal w-full max-w-4xl">
            <p>
-             I bridge the gap between mathematical theory and real-world impact. As an Operations Research Scientist, I don't just analyze data—I <strong>engineer the algorithms</strong> that drive efficiency in logistics, supply chains, and FinTech.
+             I love <strong>story-telling with data</strong>. I use data to make business decisions in fast-paced and customer-centric environments.
            </p>
            <p>
-             Currently pushing the boundaries of <strong>Vehicle Routing</strong> and <strong>Exact Algorithms</strong> (Column Generation, Benders) to solve large-scale optimization problems that standard models can't touch.
+             As a data professional, I specialize in applying analytics, <strong>machine learning</strong>, and <strong>optimization tools</strong> to solve real-world problems and recommend data-driven solutions. My background includes building and deploying models for logistics, supply chains, and complex systems.
            </p>
         </div>
       </div>

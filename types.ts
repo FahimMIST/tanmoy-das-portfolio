@@ -32,3 +32,12 @@ export interface SkillCategory {
   title: string;
   skills: string[];
 }
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  company?: string;
+  text: string;
+  initials: string;
+}
