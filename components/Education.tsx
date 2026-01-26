@@ -5,7 +5,7 @@ import { GraduationCap, Award } from 'lucide-react';
 const Education: React.FC = () => {
   return (
     <section id="education" className="py-24 px-6 lg:px-12 bg-white rounded-[2.5rem] shadow-md mb-6 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <div className="p-3 bg-slate-100 text-slate-900 rounded-xl">
             <Award size={24} />

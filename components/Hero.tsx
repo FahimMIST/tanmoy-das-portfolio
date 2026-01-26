@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           Optimizing complex <span className="border-b-4 border-slate-200 pb-1">real-world systems</span>
         </h1>
         
-        <div className="space-y-6 text-lg lg:text-xl text-slate-600 leading-relaxed font-normal w-full max-w-4xl">
+        <div className="space-y-6 text-lg lg:text-xl text-slate-600 leading-relaxed font-normal w-full max-w-6xl">
            <p>
              I love <strong>story-telling with data</strong>. I use data to make business decisions in fast-paced and customer-centric environments.
            </p>
